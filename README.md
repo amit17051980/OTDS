@@ -8,6 +8,10 @@ If you are familiar with IdaaS (Identity as a Service) concept, and have used OK
 
 Directory Services is a repository of user and group identity information and a collection of services to manage this information for OpenText applications. OTDS contains components for identity synchronization and single sign on for all OpenText applications. Directory Services offers synchronization and authentication features that can help your organization save time, and administrative overhead, by enabling you to maintain user information in one directory, for use by multiple OpenText applications. For example, you can base your OpenText Content Server user information on the user information already contained in your Windows domain. If your organization maintains several Enterprise Server systems, they can all use the same central user directory. Directory Services can synchronize with your identity provider to pull user and group information from your identity provider automatically. Directory Services then pushes these users and groups to your OpenText applications automatically and incrementally. This synchronization of user and group data across OpenText applications allows Directory Services to enable single sign on and secure access to all OpenText applications.
 
+![Alt text](https://github.com/amit17051980/OTDS/blob/main/Architecture-1.png "Figure-1")
+
+![Alt text](https://github.com/amit17051980/OTDS/blob/main/Architecture-2.png "Figure-2")
+
 ## Installation Steps (Manual Docker Build)
 Although official guides are there to use Helm Charts on Kubernetes Cluster, but I find it easy to start with basic docker containers. This allow me to understand the basis installation procedure and at the same time using containers to re-provision things fast in case things are not going well.
 
