@@ -86,9 +86,10 @@ Here are some instructions that could help you provision OTDS for your POC. In m
   4. Test OTDS Admin Portal
      Connect to OTDS Admin using the url and credentials below:
      
-     http://10.0.0.10:9001/otds-admin
+     http://{DOCKER-HOST}:9001/otds-admin
      
      User Name : otadmin@otds.admin
+     
      Password : password (Same as OTDS_PASS in response file)
      
   5. Follow the official user guide to setup OTDS for Documentum, xCP SSO. 
