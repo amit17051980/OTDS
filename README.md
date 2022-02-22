@@ -76,4 +76,23 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      
   6. Test OTDS Admin Portal
 
+## Check List
+You can use the following checklist to configure a basic installation of Directory Services for demonstration:
 
+1. Install Java.
+
+2. Install Apache Tomcat. Start Tomcat and watch for startup success in the logs.
+
+3. Create a database for OTDS to use.
+
+4. Install OpenText Directory Services.
+
+5. Sign in to your server using the OTDS web client.
+
+6. Optionally, specify the password settings for all users in an OTDS non-synchronized user partition.
+
+7. Optionally, specify the audit reporting settings and notification settings for OTDS.
+
+8. Define a user partition. It can be synchronized or non-synchronized.
+
+9. Configure an access role for your new user partition.
