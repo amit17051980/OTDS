@@ -24,14 +24,14 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      docker run --network dctm-dev --name postgres --hostname postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:11
      ```
       
-  3. Provision Tomcat Docker Container
+  2. Provision Tomcat Docker Container
      Create a tomcat 10 docker container with java 11.
      
      ```
      docker run --network dctm-dev -d --name documentum-otds --hostname documentum-otds -p 9001:8080 tomcat:10
      ```
      
-  4. Install OTDS
+  3. Install OTDS
      a. Download Official 'otds-2210-lnx.tar' file from OpenText Download Centre (under 'All Products')
      b. Extract and fix some shell scripts
         I assume that the directory where tar file has been placed is `/media-files/OTDS`
@@ -71,10 +71,28 @@ Here are some instructions that could help you provision OTDS for your POC. In m
         JDBC_PASSWORD=password
         EOF
         ```
-     d. Copy files required for next step
+     d. Copy required files for next step
+        ```
+        docker cp otds-2210-lnx.tar documentum-otds:/usr/local/tomcat/temp/
+        docker exec documentum-otds sh -c 'cd /usr/local/tomcat/temp/; tar -xf otds-2210-lnx.tar'
+        docker cp tools/checkJDBCstring.sh documentum-otds:/usr/local/tomcat/temp/tools/
+        docker cp response.properties documentum-otds:/usr/local/tomcat/temp/
+        ```
      e. Install OTDS
+        ```
+        docker exec documentum-otds sh -c 'cd /usr/local/tomcat/temp/; ./setup -rf response.properties -qi -l otds-installer.log'
+        ```
      
-  6. Test OTDS Admin Portal
+  4. Test OTDS Admin Portal
+     Connect to OTDS Admin using the url and credentials below:
+     
+     http://10.0.0.10:9001/otds-admin
+     
+     User Name : otadmin@otds.admin
+     Password : password (Same as OTDS_PASS in response file)
+     
+  5. Follow the official user guide to setup OTDS for Documentum, xCP SSO. 
+     Next version of this page will be published soon to provide some more details.
 
 ## Check List
 You can use the following checklist to configure a basic installation of Directory Services for demonstration:
