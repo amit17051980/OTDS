@@ -11,7 +11,7 @@ Directory Services is a repository of user and group identity information and a 
 
 
 ## Installation Steps (Manual Docker Build)
-Although official guides are there to use Helm Charts on Kubernetes Cluster, but I find it easy to start with basic docker containers. This allow me to understand the basis installation procedure and at the same time using containers to re-provision things fast in case things are not going well.
+Although official guides are there to use Helm Charts on Kubernetes Cluster, but I find it easy to start with basic docker containers. This allow me to understand the basic installation procedure and at the same time using containers to re-provision things fast in case things are not going well.
 
 Here are some instructions that could help you provision OTDS for your POC. In my use case I'm using Postgres as Database, Unix as OS and Tomcat 10 with OpenJDK 11.
 
