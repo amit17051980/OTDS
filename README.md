@@ -34,6 +34,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      NOCREATEROLE
      NOINHERIT
      NOREPLICATION
+     SUPERUSER
      CONNECTION LIMIT -1
      PASSWORD 'password';
 	    
