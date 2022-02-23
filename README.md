@@ -29,7 +29,6 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      ```
      CREATE ROLE otds WITH
      LOGIN
-     NOSUPERUSER
      NOCREATEDB
      NOCREATEROLE
      NOINHERIT
