@@ -15,13 +15,38 @@ Although official guides are there to use Helm Charts on Kubernetes Cluster, but
 
 Here are some instructions that could help you provision OTDS for your POC. In my use case I'm using Postgres as Database, Unix as OS and Tomcat 10 with OpenJDK 11.
 
-  1. Provision Postgres Docker Container
+  1. Provision Postgres Docker Container and create `otds` database
      I have a local docker network (dctm-dev) that I use to connect whole Documentum stack and its sub components like postgres etc. 
      This allow me to use docker hostname as FQDN.
      
      ```
      docker network create dctm-dev
      docker run --network dctm-dev --name postgres --hostname postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:11
+     ```
+     
+     Database script for `otds` database
+     ```
+     CREATE ROLE otds WITH
+	    LOGIN
+	    NOSUPERUSER
+	    NOCREATEDB
+	    NOCREATEROLE
+	    NOINHERIT
+	    NOREPLICATION
+	    CONNECTION LIMIT -1
+	    PASSWORD 'password';
+    COMMENT ON ROLE otds IS 'User for OTDS database';
+
+    CREATE DATABASE otds
+      WITH 
+      OWNER = postgres
+      ENCODING = 'UTF8'
+      CONNECTION LIMIT = -1;
+
+    COMMENT ON DATABASE otds
+      IS 'OpenText Directory Services';
+
+    GRANT ALL ON DATABASE otds TO otds;
      ```
       
   2. Provision Tomcat Docker Container
@@ -67,7 +92,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
         MIGRATION_OPENDJ_URL=
         MIGRATION_OPENDJ_PASSWORD=password
         JDBC_CONNECTION_STRING=jdbc:postgresql://postgres:5432/otds
-        JDBC_USERNAME=postgres
+        JDBC_USERNAME=otds
         JDBC_PASSWORD=password
         EOF
         ```
