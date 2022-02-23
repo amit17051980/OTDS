@@ -25,28 +25,29 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      ```
      
      Database script for `otds` database
+     
      ```
      CREATE ROLE otds WITH
-	    LOGIN
-	    NOSUPERUSER
-	    NOCREATEDB
-	    NOCREATEROLE
-	    NOINHERIT
-	    NOREPLICATION
-	    CONNECTION LIMIT -1
-	    PASSWORD 'password';
-    COMMENT ON ROLE otds IS 'User for OTDS database';
+     LOGIN
+     NOSUPERUSER
+     NOCREATEDB
+     NOCREATEROLE
+     NOINHERIT
+     NOREPLICATION
+     CONNECTION LIMIT -1
+     PASSWORD 'password';
+	    
+     COMMENT ON ROLE otds IS 'User for OTDS database';
 
-    CREATE DATABASE otds
-      WITH 
-      OWNER = postgres
-      ENCODING = 'UTF8'
-      CONNECTION LIMIT = -1;
+     CREATE DATABASE otds WITH 
+     OWNER = postgres
+     ENCODING = 'UTF8'
+     CONNECTION LIMIT = -1;
+ 
+     COMMENT ON DATABASE otds
+     IS 'OpenText Directory Services';
 
-    COMMENT ON DATABASE otds
-      IS 'OpenText Directory Services';
-
-    GRANT ALL ON DATABASE otds TO otds;
+     GRANT ALL ON DATABASE otds TO otds;
      ```
       
   2. Provision Tomcat Docker Container
