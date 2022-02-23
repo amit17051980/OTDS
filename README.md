@@ -40,7 +40,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      COMMENT ON ROLE otds IS 'User for OTDS database';
 
      CREATE DATABASE otds WITH 
-     OWNER = postgres
+     OWNER = otds
      ENCODING = 'UTF8'
      CONNECTION LIMIT = -1;
  
