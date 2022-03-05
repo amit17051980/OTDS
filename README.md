@@ -119,12 +119,19 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      Password : password (Same as OTDS_PASS in response file)
      
      
-     <img src="OTDS-Admin-3.png" alt="drawing" width="550"/>
+     <img src="OTDS-Admin-1.png" alt="drawing" width="550"/>
      
      
      <img src="OTDS-Admin-2.png" alt="drawing" width="750"/>
      
-  5. Follow the official user guide to setup OTDS for Documentum, xCP SSO. 
+  5. Follow official guide to Synchronise users from Azure AD (if your users are provisioned here), and enable SAML SSO for OTDS Admin UI.
+     See the screenshots below after implementing SAML SSO for OTDS Admin UI.
+     
+     <img src="OTDS-Admin-3.png" alt="drawing" width="550"/>
+     
+     <img src="OTDS-Admin-4.png" alt="drawing" width="550"/>
+     
+  7. Follow official user guide to setup OTDS for Documentum, xCP SSO. 
      Next version of this page will be published soon to provide some more details.
 
 ## Check List
