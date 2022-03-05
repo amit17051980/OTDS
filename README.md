@@ -119,7 +119,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      Password : password (Same as OTDS_PASS in response file)
      
      
-     <img src="OTDS-Admin-1.png" alt="drawing" width="550"/>
+     <img src="OTDS-Admin-3.png" alt="drawing" width="550"/>
      
      
      <img src="OTDS-Admin-2.png" alt="drawing" width="750"/>
