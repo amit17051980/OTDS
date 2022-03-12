@@ -8,6 +8,9 @@ If you are familiar with IdaaS (Identity as a Service) concept, and have used OK
 
 Directory Services is a repository of user and group identity information and a collection of services to manage this information for OpenText applications. OTDS contains components for identity synchronization and single sign on for all OpenText applications. Directory Services offers synchronization and authentication features that can help your organization save time, and administrative overhead, by enabling you to maintain user information in one directory, for use by multiple OpenText applications. For example, you can base your OpenText Content Server user information on the user information already contained in your Windows domain. If your organization maintains several Enterprise Server systems, they can all use the same central user directory. Directory Services can synchronize with your identity provider to pull user and group information from your identity provider automatically. Directory Services then pushes these users and groups to your OpenText applications automatically and incrementally. This synchronization of user and group data across OpenText applications allows Directory Services to enable single sign on and secure access to all OpenText applications.
 
+**OpenText Directory Services is a security service that acts as an identity broker between corporate user directory services and OpenText products. OTDS enables centralized identity management and Single Sign-On (SSO) for OpenText products. This simplifies authentication setup while increasing security and corporate compliance across all OpenText applications. As a single centralized point for identity management of users, groups, and other organizational units, OTDS solves for seamless user authentication and access to 
+Documentum Server and associated components like D2, xCP and Webtop clients.**
+
 
 
 ## Installation Steps (Manual Docker Build)
