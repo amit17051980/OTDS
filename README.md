@@ -120,7 +120,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
         ```
      
   4. Test OTDS Admin Portal
-     Connect to OTDS Admin using the url and credentials below:
+     Connect to OTDS Admin using the URL and credentials below:
      
      http://{DOCKER-HOST}:9001/otds-admin
      
@@ -164,3 +164,15 @@ You can use the following checklist to configure a basic installation of Directo
 8. Define a user partition. It can be synchronized or non-synchronized.
 
 9. Configure an access role for your new user partition.
+
+That’s it! Thanks for reading my page :)
+
+## Next Steps
+Once you understood OTDS components and the integration patterns with Identity Providers, it would be nice to attempt below integration with the help of official guides. If you have concerns, please raise issues, and I'll try my level best to address at the earliest.
+
+1. Define a user partition based on appropriate group and user filters. It can be synchronized or non-synchronized
+2. Configure Resource and Access Roles for on-demand (push-connector) user synchronisation in Documentum Repository.
+3. Configure OAuth2.0 endpoint for xCP or Documentum REST Client.
+4. Configure xCP or Documentum REST to redirect user to get Access Tokens from OTDS
+
+
