@@ -68,8 +68,11 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      ```
      
   3. Install OTDS
+  
      a. Download Official 'otds-2210-lnx.tar' file from OpenText Download Centre (under 'All Products')
+     
      b. Extract and fix some shell scripts
+     
         I assume that the directory where tar file has been placed is `/media-files/OTDS`
         ```
         tar -xf otds-2210-lnx.tar 
