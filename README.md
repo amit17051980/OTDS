@@ -145,7 +145,7 @@ Here are some instructions that could help you provision OTDS for your POC. In m
      <img src="OTDS-Admin-4.png" alt="drawing" width="550"/>
      
   7. Follow official user guide to setup OTDS for Documentum, xCP SSO. 
-     Next version of this page will be published soon to provide some more details.
+     If you want to integrate OTDS with xCP, REST, Content Connect, custom Web Apps etc. please contact me on my LinkedIn Page https://www.linkedin.com/in/amitdctm/
 
 ## Check List
 You can use the following checklist to configure a basic installation of Directory Services for demonstration:
